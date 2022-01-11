@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+
+  webserver:
+    build: https://github.com/tehZevo/docker-example.git
+    ports:
+      - "8080:80"
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+
+    #TODO: show environment and volume use
